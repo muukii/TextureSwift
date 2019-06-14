@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SpecBuilder_Example' do
+  pod 'SpecBuilder', :path => '../'
+
+  target 'SpecBuilder_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
