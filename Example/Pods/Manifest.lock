@@ -1,0 +1,23 @@
+PODS:
+  - SpecBuilder (0.1.0):
+    - Texture/Core (~> 2.8)
+  - Texture/Core (2.8.1)
+
+DEPENDENCIES:
+  - SpecBuilder (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Texture
+
+EXTERNAL SOURCES:
+  SpecBuilder:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  SpecBuilder: cd54312659558e4c41166369d9895e9e2f42f065
+  Texture: 8ecf6984065a1e54f06bf97b349ecca28582acd7
+
+PODFILE CHECKSUM: bbe0425ca6b3d89f4f41eda5f7132967cc4d2ad9
+
+COCOAPODS: 1.7.0

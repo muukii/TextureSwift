@@ -1,0 +1,6 @@
+framework module SpecBuilder {
+  umbrella header "SpecBuilder-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_SpecBuilder_Example {
+  umbrella header "Pods-SpecBuilder_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
