@@ -167,6 +167,41 @@ public enum AS {
       [ASInsetLayoutSpec(insets: insets, child: content.make().first!)]
     }
   }
+  
+  public struct Overlay<OverlayContnt, Content> : _ASLayoutElementType where OverlayContnt : _ASLayoutElementType, Content : _ASLayoutElementType {
+    
+    public let content: Content
+    public let overlay: OverlayContnt
+    
+    public init(content: () -> Content, overlay: () -> OverlayContnt) {
+      self.content = content()
+      self.overlay = overlay()
+    }
+    
+    public func make() -> [ASLayoutElement] {
+      [
+        ASOverlayLayoutSpec(child: content.make().first!, overlay: overlay.make().first!)
+      ]
+    }
+    
+  }
 
+  public struct Background<BackgroundContnt, Content> : _ASLayoutElementType where BackgroundContnt : _ASLayoutElementType, Content : _ASLayoutElementType {
+    
+    public let content: Content
+    public let background: BackgroundContnt
+    
+    public init(content: () -> Content, overlay: () -> BackgroundContnt) {
+      self.content = content()
+      self.background = overlay()
+    }
+    
+    public func make() -> [ASLayoutElement] {
+      [
+        ASBackgroundLayoutSpec(child: content.make().first!, background: background.make().first!)
+      ]
+    }
+    
+  }
   
 }
